@@ -32,5 +32,17 @@ ZELLE
 
 The Messenger of Allah (PBUH) said: Whoever builds a mosque for the sake of Allah, like a sparrow's nest for Allah or even smaller, Allah will build for him a house in Paradise."
 
+---
+New Masjid Site: 1300 Peachtree Pkwy, Cumming, GA 30041
+Land 7.5 acres
+
+Directly across the street
+
+Current Masjid Site: 1235 Peachtree Pkwy, Cumming, GA 30041
+land 4.5 acres
+Future Islamic School
+
+---
+
 1235 Peachtree Parkway, Cumming, CA 30041
 https://alrahmanmasjid.com/

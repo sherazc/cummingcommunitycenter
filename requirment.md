@@ -54,3 +54,7 @@ I will give you content/text of a section by section. And I want you to give me 
 
 Go to this page to see the current state. Use curl or something to understand how it looks. Also how the images look
 https://cummingcommunitycenter.com/home2/
+
+Current masjid address: 1235 Peachtree Pkwy, Cumming, GA 30041
+
+Trying to purchase land at address: 1300 Peachtree Pkwy, Cumming, GA 30041
