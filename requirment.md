@@ -6,7 +6,7 @@ I have delegate access to the account godaddy.com main account holder.
 
 The index of this website redirects to https://alrahmanmasjid.com/ because https://cummingcommunitycenter.com is not ready yet
 
-For now it only have single page https://cummingcommunitycenter.com/home/ 
+For now it only have single page https://cummingcommunitycenter.com/home/
 
 I have copy pasted Current website content in phase1_content.md
 
@@ -29,3 +29,28 @@ By Elegant Themes
 Database 
 MySQL 8.2
 
+## Phase 2
+I have duplicated https://cummingcommunitycenter.com/home/ and created 
+https://cummingcommunitycenter.com/home2/
+
+/home2 will have the latest phase 2 information
+
+Flyer-phase2.md is the core information that I need to update home2 with.
+
+In phase 1 we were thinking of bringing investors, donors and pledges to fund the new masjid.
+
+But now it will be just donors and pledges. No investors.
+
+the last land purchase deal did not go through.
+
+This is the new land we are trying to purchase.
+
+## Requirements
+I need to update /home2/
+
+I want you to help me update page step by step.
+
+I will give you content/text of a section by section. And I want you to give me the updated or revised content. Make it sound good. 
+
+Go to this page to see the current state. Use curl or something to understand how it looks. Also how the images look
+https://cummingcommunitycenter.com/home2/
