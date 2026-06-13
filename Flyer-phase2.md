@@ -20,7 +20,7 @@ Every dollar brings us closer to securing our masjid's future.
 Join your brothers and sisters in this blessed sadaqah jariyah.
 
 GOAL TO RAISE
-$2,250,000
+$2,150,000
 
 QR Codes
 ACH/CREDIT/DEBIT
