@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Rahman Masjid Extension — Build the Future of Our Community</title>
+<style>
+  :root{
+    --green:#0f5132; --green-d:#0a3a24; --green2:#157347;
+    --gold:#c8962a; --gold-d:#a87c1e; --gold-l:#f6ecd6;
+    --ink:#1f2a26; --grey:#5f6b66; --line:#e3e8e5; --bg:#fbfaf7; --cream:#f4f1ea;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:"Segoe UI",Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  h1,h2,h3{ line-height:1.15; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 22px; }
+  section{ padding:64px 0; }
+  .eyebrow{ color:var(--gold-d); font-weight:800; letter-spacing:3px; text-transform:uppercase; font-size:13px; margin-bottom:10px; }
+  .lead{ color:var(--grey); font-size:18px; max-width:640px; }
+
+  /* ---------- top bar ---------- */
+  .topbar{ background:black; color:#fff; font-size:13.5px; }
+  .topbar .wrap{ display:flex; justify-content:space-between; align-items:center; padding:9px 22px; flex-wrap:wrap; gap:6px; }
+  .topbar a{ color:#fff; text-decoration:none; opacity:.9; }
+  .topbar a:hover{ opacity:1; }
+
+  /* ---------- buttons ---------- */
+  .btn{ display:inline-block; border:none; cursor:pointer; font-weight:800; font-size:16px; text-decoration:none;
+        padding:15px 34px; border-radius:8px; transition:transform .15s, box-shadow .15s; }
+  .btn-gold{ background:var(--gold); color:#fff; box-shadow:0 6px 18px rgba(168,124,30,.35); }
+  .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(168,124,30,.45); }
+  .btn-ghost{ background:transparent; color:#fff; border:2px solid rgba(255,255,255,.55); }
+  .btn-ghost:hover{ border-color:#fff; }
+  .btn-green{ background:var(--green); color:#fff; }
+  .btn-green:hover{ transform:translateY(-2px); }
+  .btn-sm{ padding:11px 22px; font-size:14px; }
+  .linklike{ color:var(--gold-l); text-decoration:underline; font-weight:600; font-size:15px; }
+.yellowBackground {
+  background: 
+           linear-gradient(#ffad05eb,#e19704d1),
+           radial-gradient(circle at 30% 20%, #1c6b45, #0a3a24 70%); overflow:hidden; 
+}
+  /* ---------- hero ---------- */
+  .hero{ position:relative; color:#fff; text-align:center; padding:96px 0 90px;
+         background: 
+           linear-gradient(#ffad05eb,#e19704d1),
+           radial-gradient(circle at 30% 20%, #1c6b45, #0a3a24 70%); overflow:hidden; 
+          }
+  .hero::after{ /* simple skyline silhouette */
+    content:""; position:absolute; left:0; right:0; bottom:0; height:120px; opacity:.18;
+    background:
+      radial-gradient(circle at 50% 100%, #fff 0 18px, transparent 19px),
+      linear-gradient(#fff,#fff);
+    -webkit-mask:linear-gradient(#000,#000); pointer-events:none; display:none; }
+  .hero .dome{ font-size:46px; margin-bottom:8px; }
+  .hero h1{ font-size:48px; max-width:820px; margin:0 auto 18px; }
+  .hero p{ font-size:19px; color:#e8efe9; max-width:640px; margin:0 auto 30px; }
+  .hero .cta-row{ display:flex; gap:18px; justify-content:center; align-items:center; flex-wrap:wrap; }
+
+  /* ---------- progress ---------- */
+  .progress{ background:var(--cream); border-bottom:1px solid var(--line); }
+  .progress .card{ background:#fff; border-radius:16px; box-shadow:0 10px 30px rgba(15,81,50,.08);
+                   padding:34px 36px; margin-top:-66px; position:relative; border:1px solid var(--line); }
+  .progress h2{ color:var(--green); font-size:26px; text-align:center; margin-bottom:18px; }
+  .stats{ display:flex; justify-content:center; gap:42px; flex-wrap:wrap; margin-bottom:18px; }
+  .stat{ text-align:center; }
+  .stat b{ display:block; font-size:30px; color:var(--gold-d); }
+  .stat span{ font-size:13px; color:var(--grey); text-transform:uppercase; letter-spacing:1px; }
+  .bar{ height:18px; background:#e7ece9; border-radius:10px; overflow:hidden; }
+  .bar i{ display:block; height:100%; width:0; border-radius:10px;
+          background:linear-gradient(90deg,var(--green2),var(--gold)); transition:width 1.6s ease; }
+  .bar-label{ text-align:center; margin-top:10px; color:var(--grey); font-size:14px; }
+  .bar-label b{ color:var(--green); }
+
+  /* ---------- generic two-col ---------- */
+  .why{ background:#fff; }
+  .why h2{ font-size:32px; color:var(--green); margin-bottom:14px; }
+  .why .big{ font-size:22px; font-weight:700; color:var(--ink); margin:14px 0; }
+  .ayah{ border-left:4px solid var(--gold); background:var(--gold-l); padding:16px 20px; border-radius:6px;
+         font-style:italic; color:var(--green-d); margin-top:18px; max-width:620px; }
+  .ayah cite{ display:block; font-style:normal; font-weight:700; margin-top:6px; font-size:14px; color:var(--gold-d); }
+
+  /* ---------- vision ---------- */
+  .vision{ background:var(--cream); text-align:center; }
+  .vision h2{ font-size:32px; color:var(--green); margin-bottom:8px; }
+  .cards2{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:34px; text-align:left; }
+  .vcard{ background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(0,0,0,.06); border:1px solid var(--line); }
+  .vcard .img{ height:150px; display:flex; align-items:center; justify-content:center; font-size:54px; color:#fff; }
+  .vcard .img.a{ background:linear-gradient(135deg,#157347,#0a3a24); }
+  .vcard .img.b{ background:linear-gradient(135deg,#c8962a,#a87c1e); }
+  .vcard .body{ padding:22px 24px; }
+  .vcard h3{ color:var(--green); font-size:20px; margin-bottom:6px; }
+  .vcard .addr{ color:var(--gold-d); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+
+  /* ---------- tiers ---------- */
+  .tiers{ background:#fff; text-align:center; }
+  .tiers h2{ font-size:32px; color:var(--green); margin-bottom:8px; }
+  .cards4{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin:34px 0 26px; }
+  .tier{ border:2px solid var(--line); border-radius:14px; padding:26px 14px; transition:.18s; cursor:pointer; background:#fff; }
+  .tier:hover{ border-color:var(--gold); transform:translateY(-4px); box-shadow:0 12px 26px rgba(168,124,30,.18); }
+  .tier .amt{ font-size:30px; font-weight:800; color:var(--green); }
+  .tier .what{ color:var(--grey); margin-top:6px; font-weight:600; }
+  .tier.feat{ border-color:var(--gold); background:var(--gold-l); }
+  .tier.feat .tag{ display:inline-block; background:var(--gold); color:#fff; font-size:11px; font-weight:800;
+                   padding:2px 10px; border-radius:10px; letter-spacing:1px; margin-bottom:8px; }
+  .micro{ color:var(--grey); font-size:15px; margin-bottom:22px; }
+
+  /* ---------- social proof ---------- */
+  .proof{ 
+    /* background:linear-gradient(135deg,#0f5132,#0a3a24);  */
+    color:#fff; text-align:center; }
+  .proof h2{ font-size:30px; margin-bottom:34px; }
+  .proof h2 span{ color:var(--gold); }
+  .quotes{ display:grid; grid-template-columns:1fr 1fr; gap:24px; text-align:left; }
+  .quote{ background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:14px; padding:26px 28px; }
+  .quote p{ font-size:17px; font-style:italic; color:#eef5ef; }
+  .quote .who{ margin-top:14px; font-weight:800; color:var(--gold); font-style:normal; }
+  .quote .who small{ display:block; color:#c9d6cf; font-weight:500; }
+
+  /* ---------- transparency ---------- */
+  .trans{ background:var(--cream); }
+  .trans h2{ font-size:32px; color:var(--green); text-align:center; margin-bottom:32px; }
+  .phases{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .phase{ background:#fff; border-radius:14px; padding:26px 28px; border-top:5px solid var(--gold); box-shadow:0 8px 20px rgba(0,0,0,.05); }
+  .phase .num{ color:var(--gold-d); font-weight:800; letter-spacing:1px; font-size:13px; }
+  .phase h3{ color:var(--green); font-size:21px; margin:4px 0 8px; }
+  .compliance{ display:flex; align-items:center; gap:12px; justify-content:center; margin-top:28px;
+               background:#fff; border:1px solid var(--line); border-radius:50px; padding:12px 26px; max-width:560px; margin-left:auto; margin-right:auto; }
+  .compliance .check{ width:26px; height:26px; background:var(--green2); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .compliance b{ color:var(--green); }
+
+  /* ---------- pay ---------- */
+  .pay{ background:#fff; text-align:center; }
+  .pay h2{ font-size:32px; color:var(--green); margin-bottom:8px; }
+  .pay-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:32px 0 18px; }
+  .pm{ border:1px solid var(--line); border-radius:14px; padding:26px 20px; background:var(--bg); }
+  .pm .ic{ font-size:32px; }
+  .pm h3{ color:var(--green); font-size:18px; margin:8px 0 6px; }
+  .pm p{ color:var(--grey); font-size:14px; }
+  .pm code{ background:#fff; border:1px solid var(--line); padding:2px 7px; border-radius:5px; font-size:13px; color:var(--green-d); }
+
+  /* ---------- faq ---------- */
+  .faq{ background:var(--cream); }
+  .faq h2{ font-size:32px; color:var(--green); text-align:center; margin-bottom:30px; }
+  details{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 22px; margin-bottom:12px; max-width:760px; margin-left:auto; margin-right:auto; }
+  summary{ font-weight:700; color:var(--green); cursor:pointer; font-size:17px; list-style:none; display:flex; justify-content:space-between; }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:"+"; color:var(--gold); font-size:22px; line-height:1; }
+  details[open] summary::after{ content:"–"; }
+  details p{ color:var(--grey); margin-top:12px; }
+
+  /* ---------- final ---------- */
+  .final{ 
+    /* background:linear-gradient(135deg,#c8962a,#a87c1e);  */
+    color:#fff; text-align:center; }
+  .final h2{ font-size:38px; margin-bottom:14px; }
+  .final p{ font-size:19px; max-width:620px; margin:0 auto 28px; color:#fff8ec; }
+  .final .cta-row{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .final .btn-gold{ background:#fff; color:var(--gold-d); }
+  .final .btn-ghost{ border-color:rgba(255,255,255,.7); }
+
+  /* ---------- footer ---------- */
+  footer{ background:#000; color:#cfe0d6; text-align:center; padding:34px 0; font-size:14px; }
+  footer a{ color:#fff; }
+
+  /* ---------- sticky donate ---------- */
+  .sticky{ position:fixed; right:20px; bottom:20px; z-index:50; }
+
+  @media(max-width:760px){
+    .hero h1{ font-size:34px; } section{ padding:48px 0; }
+    .cards2,.cards4,.quotes,.phases,.pay-grid{ grid-template-columns:1fr; }
+    .stats{ gap:24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="wrap">
+  <span>📞 770-330-4204 &nbsp;·&nbsp; ✉️ admin@AlRahmanMasjid.com</span>
+  <span><a href="#donate">Donate</a> &nbsp;·&nbsp; <a href="#vision">Vision</a> &nbsp;·&nbsp; <a href="#faq">FAQ</a></span>
+</div></div>
+
+<!-- 1 · HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="dome">🕌</div>
+    <h1>A Permanent Home for Our Ummah in Forsyth County</h1>
+    <p>Help us secure 7.5 acres for a purpose-built masjid and a full-time Islamic school — a sadaqah jariyah that will serve our families for generations.</p>
+    <div class="cta-row">
+      <a href="#donate" class="btn btn-gold">Donate Now</a>
+      <a href="#donate" class="linklike">or make a pledge →</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2 · PROGRESS -->
+<section class="progress" style="padding-top:0;">
+  <div class="wrap">
+    <div class="card">
+      <h2>$2,150,000 by August 31, 2026</h2>
+      <div class="stats">
+        <div class="stat"><b>$817K</b><span>Raised</span></div>
+        <div class="stat"><b>624</b><span>Donors</span></div>
+        <div class="stat"><b>78</b><span>Days Left</span></div>
+      </div>
+      <div class="bar"><i id="fill" data-pct="38" style="width:38%"></i></div>
+      <div class="bar-label"><b>38%</b> of our goal reached — every gift brings us closer to breaking ground.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · WHY NOW -->
+<section class="why">
+  <div class="wrap">
+    <div class="eyebrow">The Need Is Already Here</div>
+    <h2>We've Outgrown Our Home</h2>
+    <p class="big">Every Jumu'ah, 500+ worshippers crowd into a space never built for us.</p>
+    <p class="lead">Parking overflows onto neighboring lots. And mounting pressure from the condo association means our current arrangement won't last. The need isn't coming — it's already here.</p>
+    <div class="ayah">
+      "The mosques of Allah are only to be maintained by those who believe in Allah and the Last Day."
+      <cite>— Qur'an 9:18</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · VISION -->
+<section class="vision" id="vision">
+  <div class="wrap">
+    <div class="eyebrow">Our Plan</div>
+    <h2>Two Locations. One Thriving Ummah.</h2>
+    <p class="lead" style="margin:0 auto;">One community. Two campuses. A legacy that outlives us all.</p>
+    <div class="cards2">
+      <div class="vcard" >
+        <div class="img a" style="background-color: #000;">🕌</div>
+        <div class="body">
+          <div class="addr">New Masjid · 1300 Peachtree Pkwy</div>
+          <h3>A Masjid Built for Us</h3>
+          <p>A purpose-built masjid on 7.5 acres with 300+ parking spaces, a multipurpose hall, and room to grow for decades to come.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="img b">📖</div>
+        <div class="body">
+          <div class="addr">Islamic School · 1235 Peachtree Pkwy</div>
+          <h3>A School for the Next Generation</h3>
+          <p>Our current home transforms into a full-time Islamic school, nurturing our children's faith and education close to home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · TIERS -->
+<section class="tiers" id="donate">
+  <div class="wrap">
+    <div class="eyebrow">Choose Your Sadaqah Jariyah</div>
+    <h2>Every Dollar Is a Brick in Your Akhirah</h2>
+    <div class="cards4">
+      <div class="tier"><div class="amt">$100</div><div class="what">A brick</div></div>
+      <div class="tier feat"><span class="tag">MOST GIVEN</span><div class="amt">$1,000</div><div class="what">A window</div></div>
+      <div class="tier"><div class="amt">$5,000</div><div class="what">A doorway</div></div>
+      <div class="tier"><div class="amt">$25,000</div><div class="what">A classroom</div></div>
+    </div>
+    <p class="micro">No amount is too small — all are blessed. Give once, or pledge monthly.</p>
+    <a href="#pay" class="btn btn-gold">Give Now</a>
+    <div class="ayah" style="margin:30px auto 0; text-align:left;">
+      "Whoever builds a masjid for Allah, Allah will build for him a house in Paradise."
+      <cite>— Bukhari &amp; Muslim</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · SOCIAL PROOF -->
+<section class="proof" style="background-color: #000;">
+  <div class="wrap">
+    <h2>Join <span>624 Families</span> Already Building This Future</h2>
+    <div class="quotes">
+      <div class="quote">
+        <p>"This is the masjid our children will grow up in. I gave because I want my name in its foundation."</p>
+        <div class="who">Br. Yusuf A.<small>Cumming, GA</small></div>
+      </div>
+      <div class="quote">
+        <p>"Every dollar goes directly to the land — no interest, full transparency. I trust where this is going."</p>
+        <div class="who">Imam [Name]<small>Al Rahman Masjid</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · TRANSPARENCY -->
+<section class="trans">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center;">Where Your Money Goes</div>
+    <h2>How Your Donation Is Used</h2>
+    <div class="phases">
+      <div class="phase">
+        <div class="num">PHASE 1</div>
+        <h3>Secure the Land</h3>
+        <p>Raise $2,150,000 by August 31, 2026 to purchase the 7.5-acre site for our new masjid.</p>
+      </div>
+      <div class="phase">
+        <div class="num">PHASE 2</div>
+        <h3>Build the Future</h3>
+        <p>Masjid construction begins, and our current site is transformed into a full-time Islamic school.</p>
+      </div>
+    </div>
+    <div class="compliance">
+      <div class="check">✓</div>
+      <div><b>100% Shariah-Compliant</b> — funds go directly to land acquisition, with no interest-based instruments.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · PAYMENT -->
+<section class="pay" id="pay">
+  <div class="wrap">
+    <div class="eyebrow">Ready to Give?</div>
+    <h2>Here's How to Donate</h2>
+    <div class="pay-grid">
+      <div class="pm">
+        <div class="ic">💳</div>
+        <h3>Card · Apple Pay · CashApp · ACH</h3>
+        <p>The fastest way to give securely online.</p>
+        <a href="#" class="btn btn-green btn-sm" style="margin-top:12px;">Donate Securely</a>
+      </div>
+      <div class="pm">
+        <div class="ic">⚡</div>
+        <h3>Zelle</h3>
+        <p>Send to<br><code>newmasjid@alrahmanmasjid.com</code></p>
+      </div>
+      <div class="pm">
+        <div class="ic">🅿️</div>
+        <h3>PayPal</h3>
+        <p>Select<br><code>"Masjid Expansion Project"</code></p>
+      </div>
+    </div>
+    <p class="micro">Want to give on behalf of a loved one? You can — and we'll send an acknowledgment.</p>
+  </div>
+</section>
+
+<!-- 9 · FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Frequently Asked Questions</h2>
+    <details open><summary>Is there a minimum donation?</summary><p>No — there is no minimum. Every amount is blessed and brings us closer to our goal.</p></details>
+    <details><summary>Is this Shariah-compliant?</summary><p>Yes. Funds go directly toward land acquisition, with no interest-based (riba) instruments involved.</p></details>
+    <details><summary>Can I donate on behalf of someone else?</summary><p>Absolutely. You can give on behalf of a loved one, and we'll provide an acknowledgment.</p></details>
+  </div>
+</section>
+
+<!-- 10 · FINAL CTA -->
+<section class="yellowBackground final ">
+  <div class="wrap">
+    <h2>Build It Together</h2>
+    <p>Generations of Muslims will pray, learn, and gather on this land — and the reward flows back to you with every sajdah.</p>
+    <div class="cta-row">
+      <a href="#pay" class="btn btn-gold">Donate Now</a>
+      <a href="#donate" class="btn btn-ghost">Make a Pledge</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Al Rahman Masjid Extension &nbsp;·&nbsp; 📞 770-330-4204 &nbsp;·&nbsp; ✉️ admin@AlRahmanMasjid.com<br>
+    <a href="https://alrahmanmasjid.com/">alrahmanmasjid.com</a> &nbsp;·&nbsp; This is our sadaqah jariyah. Let's build it together.
+  </div>
+</footer>
+
+<a href="#pay" class="btn btn-gold sticky">❤️ Donate</a>
+
+<script>
+  // Animate the progress bar when it scrolls into view
+  const fill = document.getElementById('fill');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ fill.style.width = fill.dataset.pct + '%'; obs.disconnect(); } });
+  },{threshold:.4});
+  obs.observe(fill);
+</script>
+</body>
+</html>
